@@ -1,0 +1,17 @@
+<% include ./partials/header %>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <div class="form-group text-center">
+            <form action="/posts/new" method="POST">
+                <input type="text" class="form-group" name="title" placeholder="Title...">
+                <textarea class="form-control" rows="10" name="content" placeholder="Post your content here..."></textarea>
+                <input type="checkbox" id="privatepost" name="privatepost" value="on">
+                <label for="privatepost">Make this post private</label>
+                <button class="btn btn-dark"type="submit">Post!</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include ./partials/footer %>

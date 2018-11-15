@@ -1,0 +1,13 @@
+body {
+    background-color: darkgray;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.jumbotron-fluid {
+    background: transparent;
+}
+
+section {
+    color: white;
+}

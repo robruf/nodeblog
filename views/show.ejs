@@ -1,0 +1,82 @@
+<% include ./partials/header %>
+
+    <div class="container-fluid mt-4">
+        <div class="jumbotron bg-light">
+
+            <h3><%= post.title %> </h3>
+            <p><a class="userBlogLink" href="/blogs/<%=post.author%>"><strong><%= post.author %></strong></a>, <span class="text-muted"><%= post.created.toDateString() %> </span></p>
+            <hr class="my-4">
+            <p class><%= post.content %> </p>
+
+            <% if (post.author == user.username) { %>
+                <div class="container-fluid text-right">
+                    <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+                        <a class="btn btn-dark" href="/posts/<%=post._id%>/edit">Edit</a>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            <% } %>
+        
+            <div>
+                <h4>Comments</h3>
+                <!-- comments here -->
+                <% post.comments.forEach( (comment) => { %>
+                    <div>
+                        <p class="commentParagraph"><small><a class="userBlogLink" href="/blogs/<%=comment.author%>"><strong><%= comment.author %></strong></a></small> <span class="text-muted"><%= comment.comment %></span></p>
+                        <div class="editWrapper">
+                        <% if (comment.author == user.username) { %>
+
+                            
+                                
+                                <button class="btn btn-link commentActionLink toggle">Edit</button>
+                                <form class="showTextArea editForm" action="/posts/<%=post._id%>/comments/<%= comment._id %>?_method=PUT" method="POST">
+                                    <textarea name="comment"></textarea>
+                                    <button  class="btn btn-primary" type="submit">Save</button>
+                                </form>
+                            
+
+                        <% } %>
+
+                        <% if (comment.author == user.username || post.author == user.username) { %>
+                                <form  style="display:inline" action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                                    <button type="submit" class="btn btn-link commentActionLink">Delete</button>
+                                </form>
+
+                        <% } %>
+                        </div>
+                    </div>
+                        
+                <% }) %>
+
+                <button class="btn btn-link postCommentLink">Post a comment...</button>
+                <div class="postCommentForm showTextArea">
+                    <form action="/posts/<%=post._id%>/comments" method="POST">
+                        <textarea name="comment"></textarea>
+                        <button class="btn btn-primary" type="submit">Post your comment</button>
+                    </form>
+                </div>
+            </div>           
+        </div>
+    </div>
+
+<script>
+    // post comment textarea toggle
+    const postCommentLink = document.querySelector(".postCommentLink");
+    const postCommentForm = document.querySelector(".postCommentForm")
+    
+    // event listeners
+    
+    postCommentLink.addEventListener("click", function () {
+        postCommentForm.classList.toggle("showTextArea");
+    })
+
+    document.querySelectorAll('.editWrapper').forEach(el => {
+        el.addEventListener('click', e => {
+            if(e.target.classList.contains('toggle')) 
+                el.querySelector('.editForm').classList.toggle('showTextArea');
+  });
+}) 
+
+</script>
+
+<% include ./partials/footer %>

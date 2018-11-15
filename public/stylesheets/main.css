@@ -1,0 +1,28 @@
+.showTextArea {
+    display: none;
+    transition: 0.3s; 
+}
+
+.commentParagraph {
+    display: inline-block;
+}
+
+.userBlogLink {
+    color: inherit;
+}
+
+.userBlogLink:hover {
+    color: inherit;
+    text-decoration-line: none;
+}
+
+.commentActionLink {
+    font-size: 12px;
+    padding: 0;
+}
+
+.editWrapper {
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
