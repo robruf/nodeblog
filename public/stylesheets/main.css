@@ -26,3 +26,21 @@
     margin: 0;
     display: inline;
 }
+
+.newPostButton {
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.blogHeader {
+    font-family: 'Archivo', sans-serif;
+}
+body {
+    background-color: grey;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+footer a {
+    color: white;
+
+}

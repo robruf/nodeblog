@@ -8,12 +8,14 @@
 
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="/stylesheets/landing.css">
-        
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Archivo" rel="stylesheet">  
         <title>NodeBlog</title>
     </head>
     
-    <body>
-        <nav class="navbar navbar-dark navbar-expand-md bg-dark justify-content-center">
+    <body class="background">
+        
+        <nav class="navbar navbar-dark navbar-expand-md justify-content-center">
             <a href="/" class="navbar-brand d-flex w-50 mr-auto">NodeBlog</a>
             <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" area-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -39,23 +41,23 @@
                 </ul>
             </div>
         </nav>
+            <section class="jumbotron jumbotron-fluid">
+                <div class="container-fluid mt-4 text-center">
+                    <p class="display-3 header">NodeBlog</p>
+                    <p class="display-4">The innovative blogging platform</p>
+                    <p class="lead">Share your thoughts with the NodeBlog community</p>
+                    <a href="/auth/login" class="btn btn-lg btn-dark">Login</a>
+                    <a href="/auth/signup" class="btn btn-lg btn-dark">Register</a>
+                </div>
+            
 
-        <section class="jumbotron jumbotron-fluid">
-            <div class="container justify-content-center">
-                <h1 class="display-1">NodeBlog</h1>
-                <p class="display-4">The innovative blogging platform</p>
-                <p class="lead">Share your thoughts with the NodeBlog community</p>
-                <a href="/auth/login" class="btn btn-lg btn-primary">Login</a>
-                <a href="/auth/signup" class="btn btn-lg btn-primary">Register</a>
-            </div>
-        </section>
-
-        <footer class="text-center">
-            <p>&copy 2018 Roberto Rufino - <a href="https://github.com/robruf">Github </a></p>
-        </footer>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+                <footer class="text-center">
+                    <p>&copy 2018 Roberto Rufino - <a href="https://github.com/robruf">Github </a></p>
+                </footer>
+            </section>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
     </body>
 </html>

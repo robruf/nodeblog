@@ -1,13 +1,50 @@
+
+
+html, body {height:100%;}
+
 body {
-    background-color: darkgray;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.background {
+    background: url(bg8.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .jumbotron-fluid {
+    /* background: rgba(0, 0, 0, 0.2); */
     background: transparent;
+    
+}
+.navbar {
+    background: rgba(0, 0, 0, 0.3);
 }
 
+.btn-dark {
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.header {
+    font-family: 'Archivo', sans-serif;
+
+}
 section {
+    /* color: #343a40; */
+    color: black;
+    /* color: white; */
+    font-size: 1.1em;  
+    
+}
+
+footer {
+    color: black;
+}
+
+footer a {
     color: white;
 }
+
+

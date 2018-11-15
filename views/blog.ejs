@@ -8,13 +8,13 @@
 <% }) %>
 
 <% if (foundBlog.owner == user.username) { %>
-    <h1 class="text-center">Welcome back, <%= user.username %></h1>
+    <h1 class="text-center blogHeader">Welcome back, <%= user.username %></h1>
     <div class="container-fluid text-center">
-        <p>Posts: <%= foundBlog.blogposts.length %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-dark" href="/posts/new">New post</a></p>
+        <p>Posts: <%= foundBlog.blogposts.length %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-dark newPostButton" href="/posts/new">New post</a></p>
     </div>
     
 <% } else { %>
-    <h1 class="text-center">Welcome to <%= foundBlog.owner %>'s blog</h1>
+    <h1 class="text-center blogHeader">Welcome to <%= foundBlog.owner %>'s blog</h1>
     <p class="text-center">Posts: <%= counter %></p>
 <% } %>
 
