@@ -17,6 +17,7 @@ Lot of things to be added. This is a first beta release and there's lot of room 
 Feel free to share your ideas on how to make this a better platform.
 
 Technologies/Frameworks involved: 
+
     > Front-end: HTML5, CSS3, Bootstrap4, JQuery
     > Back-end: Node.JS (Express, Passport, EJS and other libraries), MongoDB
 
