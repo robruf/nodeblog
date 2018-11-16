@@ -28,7 +28,9 @@ router.post("/new", authCheck.isLoggedIn, (req, res) => {
                 if (err) {
                     console.log(err);
                 } else {
-                    res.redirect("/blogs/" + req.user.username);
+                    foundBlog.blogposts.push(newPost);
+                    foundBlog.save();
+                    res.redirect("/blogs/" + req.user.username)
                 }
             })
         }

@@ -18,9 +18,9 @@ const User = require("./models/user");
 
 const mongoose = require("mongoose");
 
-const dbUrl = "mongodb://robruf:phillaak1@ds039321.mlab.com:39321/nodeblog-beta";
-mongoose.connect(dbUrl);
-//mongoose.connect("mongodb://localhost/nodeblog_V02"); // connecting to DB (localhost)
+// const dbUrl = "mongodb:DBLINK";
+// mongoose.connect(dbUrl);
+mongoose.connect("mongodb://localhost/nodeblog_V02"); // connecting to DB (localhost)
 
 const app = express();
 
