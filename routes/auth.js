@@ -9,13 +9,13 @@ const passport = require("passport");
 const authCheck = require("../middleware/middleware")
 
 // LOGIN ROUTE
-router.get("/login", authCheck.isNotLoggedIn, (eq, res) => {
+router.get("/login", authCheck.isNotLoggedIn, (req, res) => {
     res.render("login");
 })
 
 router.post("/login", authCheck.isNotLoggedIn, passport.authenticate("local", {
     successRedirect: "/index",
-    failureRedirect: "/login"
+    failureRedirect: "/auth//login"
 }), (req, res) => {
     
 })
