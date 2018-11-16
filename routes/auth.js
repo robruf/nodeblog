@@ -15,7 +15,7 @@ router.get("/login", authCheck.isNotLoggedIn, (req, res) => {
 
 router.post("/login", authCheck.isNotLoggedIn, passport.authenticate("local", {
     successRedirect: "/index",
-    failureRedirect: "/auth//login"
+    failureRedirect: "/auth/login"
 }), (req, res) => {
     
 })
@@ -30,15 +30,16 @@ router.post("/signup", authCheck.isNotLoggedIn, (req, res) => {
         if (err) {
             console.log(err);
             res.redirect("/auth/signup");
-        }  
-        passport.authenticate("local")(req, res, () => {
-            Blog.create({owner: req.body.username}, (err, newBlog) => {
-                if (err) {
-                    console.log(err);
-                }
+        } else {
+            passport.authenticate("local")(req, res, () => {
+                Blog.create({owner: req.body.username}, (err, newBlog) => {
+                    if (err) {
+                        console.log(err);
+                    }
+                })
+                res.redirect("/index");
             })
-            res.redirect("/index");
-        })
+        }
     })
 })
 

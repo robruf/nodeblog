@@ -35,6 +35,11 @@
 .blogHeader {
     font-family: 'Archivo', sans-serif;
 }
+
+.loginLink {
+    color: white;
+}
+
 body {
     background-color: grey;
     font-family: 'Roboto Condensed', sans-serif;
